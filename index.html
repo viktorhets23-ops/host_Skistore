@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpine Peak — Магазин лижного спорядження</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<script src="js/nav-template.js"></script>
+
+<div class="page-wrapper">
+  <div class="main-content">
+
+    <!-- HERO з відео на фоні -->
+    <section class="hero">
+      <!-- Локальне фонове відео замість YouTube iframe -->
+      <div style="position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none">
+        <video 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          style="position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%);filter:brightness(0.3) saturate(0.7)">
+          <source src="video/hero-bg.mp4" type="video/mp4">
+          Ваш браузер не підтримує тег відео.
+        </video>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content slide-up">
+        <div class="hero-eyebrow">⛷️ Сезон 2026/2027 відкрито</div>
+        <h1 class="hero-title">Alpine<br><em>Peak</em></h1>
+        <p class="hero-subtitle">Найкращий вибір гірськолижного спорядження у Львові. Від початківців до професіоналів — ми маємо все для вашого ідеального спуску.</p>
+        <div>
+          <a href="catalog.html" class="btn btn-primary">Переглянути каталог</a>
+          <a href="rental.html" class="btn btn-outline">Орендувати</a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Донизу</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </section>
+
+    <!-- FEATURES STRIP -->
+    <div class="features-strip">
+      <div class="feature-item">
+        <div class="feature-icon">🚚</div>
+        <div class="feature-text">
+          <h4>Безкоштовна доставка</h4>
+          <p>При замовленні від 3 000 ₴</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔧</div>
+        <div class="feature-text">
+          <h4>Сервіс і ремонт</h4>
+          <p>Професійна заточка та налаштування</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔄</div>
+        <div class="feature-text">
+          <h4>Повернення 30 днів</h4>
+          <p>Без запитань, гарантія якості</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🏆</div>
+        <div class="feature-text">
+          <h4>Топові бренди</h4>
+          <p>Rossignol, Salomon, Head, Fischer</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="section">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Хіти продажів</div>
+        <h2 class="section-title">Популярні <em>товари</em></h2>
+        <p class="section-desc">Обрані нашими експертами найкращі позиції сезону для будь-якого рівня катання.</p>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">Всі</button>
+        <button class="filter-tab" data-filter="skis">Лижі</button>
+        <button class="filter-tab" data-filter="snowboard">Сноуборди</button>
+        <button class="filter-tab" data-filter="clothes">Одяг</button>
+        <button class="filter-tab" data-filter="boots">Черевики</button>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card reveal" data-category="skis">
+          <div class="product-img">🎿
+            <span class="product-badge">Хіт</span>
+            <button class="wishlist-btn" data-name="Rossignol Experience 86">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Лижі</div>
+            <div class="product-name">Rossignol Experience 86</div>
+            <div class="product-rating">★★★★★ (128)</div>
+            <div class="product-price">
+              <span class="price-new">18 990 ₴</span>
+              <span class="price-old">22 500 ₴</span>
+            </div>
+            <button class="btn btn-primary" onclick="addToCart('Rossignol Experience 86', 18990, '🎿')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-category="snowboard">
+          <div class="product-img">🏂
+            <span class="product-badge">-20%</span>
+            <button class="wishlist-btn" data-name="Burton Custom Flying V">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Сноуборд</div>
+            <div class="product-name">Burton Custom Flying V</div>
+            <div class="product-rating">★★★★☆ (96)</div>
+            <div class="product-price">
+              <span class="price-new">21 490 ₴</span>
+              <span class="price-old">26 900 ₴</span>
+            </div>
+            <button class="btn btn-primary" onclick="addToCart('Burton Custom Flying V', 21490, '🏂')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-category="clothes">
+          <div class="product-img">🧥
+            <button class="wishlist-btn" data-name="Salomon QST Guard Jacket">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Куртка</div>
+            <div class="product-name">Salomon QST Guard Jacket</div>
+            <div class="product-rating">★★★★★ (74)</div>
+            <div class="product-price">
+              <span class="price-new">8 490 ₴</span>
+            </div>
+            <button class="btn btn-primary" onclick="addToCart('Salomon QST Guard Jacket', 8490, '🧥')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-category="boots">
+          <div class="product-img">👟
+            <span class="product-badge">Новинка</span>
+            <button class="wishlist-btn" data-name="Head Raptor 130S GW">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Черевики</div>
+            <div class="product-name">Head Raptor 130S GW</div>
+            <div class="product-rating">★★★★★ (51)</div>
+            <div class="product-price">
+              <span class="price-new">13 290 ₴</span>
+              <span class="price-old">15 000 ₴</span>
+            </div>
+            <button class="btn btn-primary" onclick="addToCart('Head Raptor 130S GW', 13290, '👟')">До кошика</button>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem">
+        <a href="catalog.html" class="btn btn-outline">Весь каталог →</a>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section" style="background:linear-gradient(135deg, var(--deep-blue),var(--navy));border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-number" data-target="1200" data-suffix="+">0</div>
+          <div class="stat-label">Товарів в наявності</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number" data-target="15000" data-suffix="+">0</div>
+          <div class="stat-label">Задоволених клієнтів</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number" data-target="12" data-suffix=" років">0</div>
+          <div class="stat-label">На ринку</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number" data-target="25" data-suffix="">0</div>
+          <div class="stat-label">Топових брендів</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="section">
+      <div class="section-header text-center reveal" style="max-width:600px;margin:0 auto 2rem">
+        <div class="section-eyebrow">Відео</div>
+        <h2 class="section-title">Відчуй <em>адреналін</em></h2>
+      </div>
+      <div style="border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);aspect-ratio:16/9;max-width:900px;margin:0 auto" class="reveal">
+        <!-- Локальний плеєр для промо-відео замість YouTube iframe -->
+        <video 
+          controls 
+          preload="metadata" 
+          style="width:100%;height:100%;display:block;object-fit:cover">
+          <source src="video/ski-promo.mp4" type="video/mp4">
+          Ваш браузер не підтримує тег відео.
+        </video>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="section-sm" style="border-top:1px solid var(--border)">
+      <div class="section-eyebrow text-center" style="margin-bottom:2rem">Наші партнери</div>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;align-items:center">
+        <div class="reveal" style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center">
+          <div class="tag" style="font-size:1rem;padding:10px 24px">ROSSIGNOL</div>
+          <div class="tag" style="font-size:1rem;padding:10px 24px">SALOMON</div>
+          <div class="tag" style="font-size:1rem;padding:10px 24px">HEAD</div>
+          <div class="tag" style="font-size:1rem;padding:10px 24px">BURTON</div>
+          <div class="tag" style="font-size:1rem;padding:10px 24px">FISCHER</div>
+          <div class="tag" style="font-size:1rem;padding:10px 24px">VOLKL</div>
+          <div class="tag" style="font-size:1rem;padding:10px 24px">ATOMIC</div>
+          <div class="tag" style="font-size:1rem;padding:10px 24px">K2</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section" style="background:linear-gradient(135deg,rgba(0,198,255,0.1),rgba(255,107,53,0.05));border-top:1px solid var(--border)">
+      <div style="max-width:500px;margin:0 auto;text-align:center" class="reveal">
+        <div class="section-eyebrow">Підписка</div>
+        <h2 class="section-title" style="margin-bottom:1rem">Будь першим</h2>
+        <p style="color:var(--silver);margin-bottom:2rem">Отримуй знижки та новини про нові надходження першим.</p>
+        <div style="display:flex;gap:8px">
+          <input type="email" class="form-control" placeholder="ваш@email.com" style="flex:1">
+          <button class="btn btn-primary" onclick="showNotification('✅ Дякуємо за підписку!')">Підписатись</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="js/images.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

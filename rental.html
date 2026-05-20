@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Прокат спорядження — Alpine Peak</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/nav-template.js"></script>
+
+<div class="page-wrapper">
+  <div class="main-content">
+
+    <div class="page-hero" data-bg-text="ПРОКАТ">
+      <div class="breadcrumb"><a href="index.html">Головна</a> / Прокат</div>
+      <div class="section-eyebrow">🔑 Доступно вже сьогодні</div>
+      <h1 class="section-title">Прокат <em>спорядження</em></h1>
+      <p class="section-desc">Не потрібно купувати — просто орендуй якісне спорядження на день, вихідні або цілий тиждень.</p>
+    </div>
+
+    <!-- Rental Pricing -->
+    <section class="section">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Ціни</div>
+        <h2 class="section-title">Тарифи <em>прокату</em></h2>
+      </div>
+
+      <div style="overflow-x:auto" class="reveal">
+        <table class="data-table">
+          <thead>
+            <tr><th>Комплект</th><th>1 день</th><th>2–3 дні</th><th>4–6 днів</th><th>Тиждень</th><th>Застава</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color:var(--white)">🟢 Базовий</strong><br><span style="font-size:0.82rem;color:var(--silver)">Лижі + палки + черевики</span></td>
+              <td>350 ₴</td><td>300 ₴/день</td><td>250 ₴/день</td><td>1 400 ₴</td><td>1 000 ₴</td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--white)">🔵 Стандарт</strong><br><span style="font-size:0.82rem;color:var(--silver)">Базовий + шолом + маска</span></td>
+              <td>550 ₴</td><td>480 ₴/день</td><td>420 ₴/день</td><td>2 200 ₴</td><td>2 000 ₴</td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--white)">🔴 Преміум</strong><br><span style="font-size:0.82rem;color:var(--silver)">Проф. лижі + повний набір</span></td>
+              <td>900 ₴</td><td>800 ₴/день</td><td>700 ₴/день</td><td>3 600 ₴</td><td>5 000 ₴</td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--white)">🏂 Сноуборд</strong><br><span style="font-size:0.82rem;color:var(--silver)">Борд + кріплення + черевики</span></td>
+              <td>600 ₴</td><td>520 ₴/день</td><td>450 ₴/день</td><td>2 500 ₴</td><td>3 000 ₴</td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--white)">👶 Дитячий</strong><br><span style="font-size:0.82rem;color:var(--silver)">Для дітей до 12 років</span></td>
+              <td>200 ₴</td><td>170 ₴/день</td><td>140 ₴/день</td><td>900 ₴</td><td>500 ₴</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Booking Form -->
+      <div style="margin-top:3rem" class="reveal">
+        <div class="section-header">
+          <div class="section-eyebrow">Онлайн-бронювання</div>
+          <h2 class="section-title">Забронювати <em>зараз</em></h2>
+        </div>
+        <div style="max-width:600px">
+          <form class="validate" onsubmit="return false">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+              <div class="form-group">
+                <label>Ім'я *</label>
+                <input type="text" class="form-control" placeholder="Ваше ім'я" required>
+              </div>
+              <div class="form-group">
+                <label>Телефон *</label>
+                <input type="tel" class="form-control" placeholder="+380 XX XXX XX XX" required>
+              </div>
+              <div class="form-group">
+                <label>Дата початку *</label>
+                <input type="date" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label>Дата кінця *</label>
+                <input type="date" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Тип комплекту *</label>
+              <select class="form-control" required>
+                <option value="">Оберіть комплект</option>
+                <option>🟢 Базовий — 350 ₴/день</option>
+                <option>🔵 Стандарт — 550 ₴/день</option>
+                <option>🔴 Преміум — 900 ₴/день</option>
+                <option>🏂 Сноуборд — 600 ₴/день</option>
+                <option>👶 Дитячий — 200 ₴/день</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Розмір черевика</label>
+              <input type="text" class="form-control" placeholder="Наприклад: EU 42">
+            </div>
+            <div class="form-group">
+              <label>Зріст / вага (для підбору лиж)</label>
+              <input type="text" class="form-control" placeholder="175 см / 75 кг">
+            </div>
+            <div class="form-group">
+              <label>Додаткові побажання</label>
+              <textarea class="form-control" placeholder="Ваші побажання щодо спорядження..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Забронювати спорядження</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rules & FAQ -->
+    <section class="section" style="border-top:1px solid var(--border)">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem">
+        <div class="reveal">
+          <div class="section-eyebrow">Правила</div>
+          <h2 class="section-title" style="font-size:2.5rem;margin-bottom:1.5rem">Умови <em>оренди</em></h2>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+            <li style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--accent);font-size:1.2rem;flex-shrink:0">✓</span><span style="color:var(--silver);line-height:1.6">Документ, що посвідчує особу (паспорт або ID)</span></li>
+            <li style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--accent);font-size:1.2rem;flex-shrink:0">✓</span><span style="color:var(--silver);line-height:1.6">Заставна сума повертається при поверненні справного спорядження</span></li>
+            <li style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--accent);font-size:1.2rem;flex-shrink:0">✓</span><span style="color:var(--silver);line-height:1.6">Повернення здійснюється до закриття магазину (20:00)</span></li>
+            <li style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--accent);font-size:1.2rem;flex-shrink:0">✓</span><span style="color:var(--silver);line-height:1.6">При пошкодженні — оплата ремонту або компенсація вартості</span></li>
+            <li style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--accent);font-size:1.2rem;flex-shrink:0">✓</span><span style="color:var(--silver);line-height:1.6">Продовження оренди — за домовленістю (телефоном або особисто)</span></li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <div class="section-eyebrow">Питання-відповідь</div>
+          <h2 class="section-title" style="font-size:2.5rem;margin-bottom:1.5rem"><em>FAQ</em></h2>
+          <div class="faq-item">
+            <div class="faq-question">Чи можна орендувати тільки шолом?<span class="faq-toggle">+</span></div>
+            <div class="faq-answer">Так, окремі позиції також доступні для оренди. Шолом — 100 ₴/день, маска — 80 ₴/день.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Чи включена страховка?<span class="faq-toggle">+</span></div>
+            <div class="faq-answer">Страховка на спорядження не включена в ціну оренди, проте ми пропонуємо базову страховку за 50 ₴/день.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Є доставка спорядження до готелю?<span class="faq-toggle">+</span></div>
+            <div class="faq-answer">Так, пропонуємо доставку в межах Львова за 150 ₴. За межами міста — за домовленістю.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Чи підходить прокат для дітей?<span class="faq-toggle">+</span></div>
+            <div class="faq-answer">Звичайно! Маємо дитяче спорядження для дітей від 3 років. Наші спеціалісти підберуть оптимальний розмір.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="js/images.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

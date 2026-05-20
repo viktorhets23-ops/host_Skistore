@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Одяг та взуття — Alpine Peak</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/nav-template.js"></script>
+
+<div class="page-wrapper">
+  <div class="main-content">
+
+    <div class="page-hero" data-bg-text="ОДЯГ">
+      <div class="breadcrumb"><a href="index.html">Головна</a> / <a href="catalog.html">Каталог</a> / Одяг</div>
+      <div class="section-eyebrow">Гірськолижний одяг</div>
+      <h1 class="section-title">Одяг та <em>Взуття</em></h1>
+      <p class="section-desc">Функціональний та стильний одяг для зимового спорту від провідних брендів.</p>
+    </div>
+
+    <!-- Clothes -->
+    <section class="section">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Колекція 2024/25</div>
+        <h2 class="section-title">Гірськолижний <em>одяг</em></h2>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">Всі</button>
+        <button class="filter-tab" data-filter="jacket">Куртки</button>
+        <button class="filter-tab" data-filter="pants">Штани</button>
+        <button class="filter-tab" data-filter="thermals">Термобілизна</button>
+        <button class="filter-tab" data-filter="helmets">Шоломи</button>
+        <button class="filter-tab" data-filter="accessories">Аксесуари</button>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card reveal" data-category="jacket">
+          <div class="product-img">🧥<button class="wishlist-btn" data-name="Salomon QST Guard Jacket">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Куртка</div>
+            <div class="product-name">Salomon QST Guard Jacket</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">S, M, L, XL, XXL • Чорний/Синій</div>
+            <div class="product-rating">★★★★★ (74)</div>
+            <div class="product-price"><span class="price-new">8 490 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Salomon QST Guard Jacket',8490,'🧥')">До кошика</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="jacket">
+          <div class="product-img">🧥<span class="product-badge">-15%</span><button class="wishlist-btn" data-name="Rossignol Fonction Jacket">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Куртка</div>
+            <div class="product-name">Rossignol Fonction Jacket</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">XS, S, M, L • Червоний/Білий</div>
+            <div class="product-rating">★★★★☆ (38)</div>
+            <div class="product-price"><span class="price-new">6 790 ₴</span><span class="price-old">7 990 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Rossignol Fonction Jacket',6790,'🧥')">До кошика</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="pants">
+          <div class="product-img">👖<button class="wishlist-btn" data-name="Burton Covert Pants">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Штани</div>
+            <div class="product-name">Burton Covert Pants</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">S, M, L, XL • Чорний</div>
+            <div class="product-rating">★★★★★ (56)</div>
+            <div class="product-price"><span class="price-new">5 490 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Burton Covert Pants',5490,'👖')">До кошика</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="thermals">
+          <div class="product-img">🩱<span class="product-badge">Хіт</span><button class="wishlist-btn" data-name="Icebreaker 260 Tech Top">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Термобілизна</div>
+            <div class="product-name">Icebreaker 260 Tech Top</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">S, M, L, XL • 260 г/м²</div>
+            <div class="product-rating">★★★★★ (92)</div>
+            <div class="product-price"><span class="price-new">2 990 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Icebreaker 260 Tech Top',2990,'🩱')">До кошика</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="helmets">
+          <div class="product-img">⛑️<button class="wishlist-btn" data-name="Oakley MOD5 Helmet">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Шолом</div>
+            <div class="product-name">Oakley MOD5 Helmet</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">S(51-55), M(55-59), L(59-63)</div>
+            <div class="product-rating">★★★★☆ (38)</div>
+            <div class="product-price"><span class="price-new">4 990 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Oakley MOD5 Helmet',4990,'⛑️')">До кошика</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="accessories">
+          <div class="product-img">🕶️<button class="wishlist-btn" data-name="Oakley Flight Tracker">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Маска</div>
+            <div class="product-name">Oakley Flight Tracker</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">Призма-лінза • Одна розмір</div>
+            <div class="product-rating">★★★★★ (115)</div>
+            <div class="product-price"><span class="price-new">5 490 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Oakley Flight Tracker',5490,'🕶️')">До кошика</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Size Guide Table -->
+    <section class="section" style="border-top:1px solid var(--border)">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Довідник</div>
+        <h2 class="section-title">Таблиця <em>розмірів</em></h2>
+      </div>
+      <div style="overflow-x:auto" class="reveal">
+        <table class="data-table">
+          <thead>
+            <tr><th>Розмір EU</th><th>Розмір US</th><th>Обхват грудей (см)</th><th>Обхват талії (см)</th><th>Стегна (см)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>XS (42/44)</td><td>4/6</td><td>80–84</td><td>60–64</td><td>86–90</td></tr>
+            <tr><td>S (44/46)</td><td>6/8</td><td>84–88</td><td>64–68</td><td>90–94</td></tr>
+            <tr><td>M (46/48)</td><td>8/10</td><td>88–92</td><td>68–72</td><td>94–98</td></tr>
+            <tr><td>L (48/50)</td><td>10/12</td><td>92–96</td><td>72–76</td><td>98–102</td></tr>
+            <tr><td>XL (50/52)</td><td>12/14</td><td>96–100</td><td>76–80</td><td>102–106</td></tr>
+            <tr><td>XXL (52/54)</td><td>14/16</td><td>100–104</td><td>80–84</td><td>106–110</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Boots Section -->
+      <div style="margin-top:3rem" class="reveal">
+        <h3 style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--white);letter-spacing:2px;margin-bottom:1.5rem">Черевики та <span style="color:var(--accent)">Взуття</span></h3>
+        <div class="products-grid">
+          <div class="product-card" data-category="boots">
+            <div class="product-img">👟<span class="product-badge">Топ</span><button class="wishlist-btn" data-name="Head Raptor 130S GW">♡</button></div>
+            <div class="product-info">
+              <div class="product-category">Черевики</div>
+              <div class="product-name">Head Raptor 130S GW</div>
+              <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">Flex 130 • 97 мм • 26–31 Mondopoint</div>
+              <div class="product-rating">★★★★★ (51)</div>
+              <div class="product-price"><span class="price-new">13 290 ₴</span><span class="price-old">15 000 ₴</span></div>
+              <button class="btn btn-primary" onclick="addToCart('Head Raptor 130S GW',13290,'👟')">До кошика</button>
+            </div>
+          </div>
+          <div class="product-card" data-category="boots">
+            <div class="product-img">👟<button class="wishlist-btn" data-name="Salomon S/Pro 120">♡</button></div>
+            <div class="product-info">
+              <div class="product-category">Черевики</div>
+              <div class="product-name">Salomon S/Pro 120</div>
+              <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">Flex 120 • 98 мм • 24.5–32</div>
+              <div class="product-rating">★★★★★ (79)</div>
+              <div class="product-price"><span class="price-new">11 990 ₴</span></div>
+              <button class="btn btn-primary" onclick="addToCart('Salomon S/Pro 120',11990,'👟')">До кошика</button>
+            </div>
+          </div>
+          <div class="product-card" data-category="boots">
+            <div class="product-img">👟<span class="product-badge">Новинка</span><button class="wishlist-btn" data-name="Burton Photon BOA Wide">♡</button></div>
+            <div class="product-info">
+              <div class="product-category">Сноубордичні черевики</div>
+              <div class="product-name">Burton Photon BOA Wide</div>
+              <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">System BOA • US 7–14</div>
+              <div class="product-rating">★★★★☆ (33)</div>
+              <div class="product-price"><span class="price-new">9 490 ₴</span></div>
+              <button class="btn btn-primary" onclick="addToCart('Burton Photon BOA Wide',9490,'👟')">До кошика</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="js/images.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

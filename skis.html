@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лижі та Сноуборди — Alpine Peak</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/nav-template.js"></script>
+
+<div class="page-wrapper">
+  <div class="main-content">
+
+    <div class="page-hero" data-bg-text="ЛИЖІ">
+      <div class="breadcrumb"><a href="index.html">Головна</a> / <a href="catalog.html">Каталог</a> / Лижі</div>
+      <div class="section-eyebrow">Гірськолижне обладнання</div>
+      <h1 class="section-title">Лижі та <em>Сноуборди</em></h1>
+      <p class="section-desc">Найкращий вибір для будь-якого стилю катання та рівня майстерності.</p>
+    </div>
+
+    <!-- Guide Section -->
+    <section class="section">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Гід покупця</div>
+        <h2 class="section-title">Як обрати <em>лижі?</em></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem" class="reveal">
+        <div class="card">
+          <div style="font-size:2.5rem;margin-bottom:1rem">📏</div>
+          <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:0.5rem">Довжина</h3>
+          <p style="color:var(--silver);font-size:0.9rem;line-height:1.7">Стандартно — ваш зріст мінус 10–15 см для карвінгу, мінус 5 см для трас, рівна або +5 для фрірайду.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2.5rem;margin-bottom:1rem">⚡</div>
+          <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:0.5rem">Жорсткість</h3>
+          <p style="color:var(--silver);font-size:0.9rem;line-height:1.7">М'які лижі — для початківців та трюків. Жорсткі — для швидкісного катання та трас, більше контролю.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2.5rem;margin-bottom:1rem">🏔️</div>
+          <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:0.5rem">Ширина талії</h3>
+          <p style="color:var(--silver);font-size:0.9rem;line-height:1.7">до 85 мм — доглянуті схили. 85–95 мм — універсал. 95+ мм — паудер та цілина.</p>
+        </div>
+      </div>
+
+      <!-- Skis Table -->
+      <div style="margin-top:3rem" class="reveal">
+        <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:1.5rem">📊 Таблиця: Підбір лиж за рівнем</h3>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead>
+              <tr><th>Рівень</th><th>Рекомендація</th><th>Жорсткість (Flex)</th><th>Радіус</th><th>Приклади моделей</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>🟢 Початківець</td><td>М'які карвінгові лижі</td><td>55–70</td><td>10–14 м</td><td>Rossignol Nova 2, Head Easy Joy</td></tr>
+              <tr><td>🔵 Середній</td><td>Всетеренні лижі</td><td>70–85</td><td>14–17 м</td><td>Salomon QST 80, Atomic Vantage 75</td></tr>
+              <tr><td>🔴 Просунутий</td><td>Спортивні + фрірайд</td><td>85–100</td><td>17–20 м</td><td>Rossignol Experience 86, Head Kore 93</td></tr>
+              <tr><td>⚫ Експерт</td><td>Перегонові / фрірайд</td><td>100+</td><td>20+ м</td><td>Atomic Redster, Fischer RC4</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKIS Products -->
+    <section class="section" style="border-top:1px solid var(--border)">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Каталог</div>
+        <h2 class="section-title">Гірські <em>лижі</em></h2>
+      </div>
+      <div class="products-grid">
+        <div class="product-card reveal" data-category="skis">
+          <div class="product-img">🎿<span class="product-badge">Хіт</span><button class="wishlist-btn" data-name="Rossignol Experience 86">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Всетеренні</div>
+            <div class="product-name">Rossignol Experience 86</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">170, 177, 184 см • Flex 85</div>
+            <div class="product-rating">★★★★★ (128)</div>
+            <div class="product-price"><span class="price-new">18 990 ₴</span><span class="price-old">22 500 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Rossignol Experience 86',18990,'🎿')">До кошика</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="skis">
+          <div class="product-img">🎿<button class="wishlist-btn" data-name="Salomon QST 92">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Фрірайд</div>
+            <div class="product-name">Salomon QST 92</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">172, 180, 188 см • Flex 78</div>
+            <div class="product-rating">★★★★★ (87)</div>
+            <div class="product-price"><span class="price-new">22 490 ₴</span><span class="price-old">26 000 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Salomon QST 92',22490,'🎿')">До кошика</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="skis">
+          <div class="product-img">🎿<span class="product-badge">Pro</span><button class="wishlist-btn" data-name="Atomic Vantage 90 Ti">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Спортивні</div>
+            <div class="product-name">Atomic Vantage 90 Ti</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">164, 172, 180 см • Flex 95</div>
+            <div class="product-rating">★★★★☆ (63)</div>
+            <div class="product-price"><span class="price-new">24 990 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Atomic Vantage 90 Ti',24990,'🎿')">До кошика</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="skis">
+          <div class="product-img">🎿<button class="wishlist-btn" data-name="Fischer RC4 The Curv">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Карвінг</div>
+            <div class="product-name">Fischer RC4 The Curv</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">163, 170, 177 см • Flex 88</div>
+            <div class="product-rating">★★★★★ (44)</div>
+            <div class="product-price"><span class="price-new">26 490 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Fischer RC4 The Curv',26490,'🎿')">До кошика</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SNOWBOARDS -->
+    <section class="section" style="border-top:1px solid var(--border)">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Каталог</div>
+        <h2 class="section-title">Сноу<em>борди</em></h2>
+      </div>
+      <div class="products-grid">
+        <div class="product-card reveal" data-category="snowboard">
+          <div class="product-img">🏂<span class="product-badge">-20%</span><button class="wishlist-btn" data-name="Burton Custom Flying V">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">All-Mountain</div>
+            <div class="product-name">Burton Custom Flying V</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">154, 158, 162 см • Medium Flex</div>
+            <div class="product-rating">★★★★☆ (96)</div>
+            <div class="product-price"><span class="price-new">21 490 ₴</span><span class="price-old">26 900 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Burton Custom Flying V',21490,'🏂')">До кошика</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="snowboard">
+          <div class="product-img">🏂<button class="wishlist-btn" data-name="Lib Tech Cold Brew">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Freestyle</div>
+            <div class="product-name">Lib Tech Cold Brew</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">150, 155, 159 см • Soft Flex</div>
+            <div class="product-rating">★★★★★ (42)</div>
+            <div class="product-price"><span class="price-new">19 990 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Lib Tech Cold Brew',19990,'🏂')">До кошика</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="snowboard">
+          <div class="product-img">🏂<span class="product-badge">New</span><button class="wishlist-btn" data-name="Jones Flagship Snowboard">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Freeride</div>
+            <div class="product-name">Jones Flagship</div>
+            <div style="font-size:0.82rem;color:var(--silver);margin-bottom:8px">156, 161, 165 см • Stiff Flex</div>
+            <div class="product-rating">★★★★★ (31)</div>
+            <div class="product-price"><span class="price-new">23 990 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Jones Flagship',23990,'🏂')">До кошика</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="js/images.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

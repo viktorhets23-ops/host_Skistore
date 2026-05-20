@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог — Alpine Peak</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/nav-template.js"></script>
+
+<div class="page-wrapper">
+  <div class="main-content">
+
+    <div class="page-hero" data-bg-text="БЛОГ">
+      <div class="breadcrumb"><a href="index.html">Головна</a> / Блог</div>
+      <div class="section-eyebrow">📰 Наші статті</div>
+      <h1 class="section-title">Блог та <em>Поради</em></h1>
+      <p class="section-desc">Корисні статті про гірськолижний спорт, поради щодо вибору спорядження та огляди курортів.</p>
+    </div>
+
+    <section class="section">
+      <!-- Featured Article -->
+      <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:2rem;margin-bottom:3rem" class="reveal">
+        <div class="card" style="padding:0;overflow:hidden">
+          <div style="height:260px;background:linear-gradient(135deg,rgba(0,198,255,0.15),rgba(255,107,53,0.1));display:flex;align-items:center;justify-content:center;font-size:6rem;border-bottom:1px solid var(--border)">🏔️</div>
+          <div style="padding:2rem">
+            <span class="tag">Поради</span>
+            <h2 style="font-family:'Rajdhani',sans-serif;font-size:1.5rem;font-weight:700;color:var(--white);margin:1rem 0 0.75rem;line-height:1.3">Як обрати ідеальні лижі для початківця: повний гід 2025</h2>
+            <p style="color:var(--silver);line-height:1.8;margin-bottom:1.5rem">Обрати перші лижі — справа не проста. Розповідаємо про все: довжину, жорсткість, бренди і що взагалі потрібно враховувати при виборі...</p>
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:0.8rem;color:var(--silver)">15 листопада 2024 • 8 хв читання</span>
+              <a href="https://uk.wikipedia.org/wiki/Гірськолижний_спорт" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 20px;font-size:0.85rem">Читати →</a>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div class="card" style="flex:1">
+            <span class="tag" style="font-size:0.65rem">Огляд</span>
+            <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.1rem;font-weight:700;color:var(--white);margin:0.75rem 0 0.5rem;line-height:1.3">Топ-5 гірськолижних курортів Карпат 2024/25</h3>
+            <p style="color:var(--silver);font-size:0.88rem;line-height:1.7;margin-bottom:1rem">Буковель, Славське, Драгобрат — порівнюємо умови, ціни та трасу кожного...</p>
+            <a href="https://uk.wikipedia.org/wiki/Буковель" target="_blank" rel="noopener" style="color:var(--accent);font-size:0.85rem">Читати статтю →</a>
+          </div>
+          <div class="card" style="flex:1">
+            <span class="tag" style="font-size:0.65rem;background:rgba(255,107,53,0.1);border-color:rgba(255,107,53,0.3);color:var(--accent2)">Безпека</span>
+            <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.1rem;font-weight:700;color:var(--white);margin:0.75rem 0 0.5rem;line-height:1.3">10 правил безпеки на схилі, які рятують життя</h3>
+            <p style="color:var(--silver);font-size:0.88rem;line-height:1.7;margin-bottom:1rem">Шолом — це тільки початок. Дізнайтесь про всі правила безпеки від наших інструкторів...</p>
+            <a href="https://uk.wikipedia.org/wiki/Безпека_у_гірськолижному_спорті" target="_blank" rel="noopener" style="color:var(--accent);font-size:0.85rem">Читати статтю →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Всі статті</div>
+        <h2 class="section-title">Нові <em>публікації</em></h2>
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-tab active">Всі</button>
+        <button class="filter-tab">Поради</button>
+        <button class="filter-tab">Огляди</button>
+        <button class="filter-tab">Безпека</button>
+        <button class="filter-tab">Новини</button>
+      </div>
+
+      <div class="blog-grid">
+        <div class="blog-card reveal">
+          <div class="blog-img">⛷️</div>
+          <div class="blog-body">
+            <div class="blog-meta">🗓 10 листопада 2024 • Поради</div>
+            <div class="blog-title">Карвінг vs фрірайд: що підходить саме вам?</div>
+            <div class="blog-excerpt">Розповідаємо про різницю між стилями катання, яке спорядження підходить для кожного, і як визначитись зі своїм напрямком.</div>
+            <a href="https://uk.wikipedia.org/wiki/Гірськолижний_спорт" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 16px;font-size:0.8rem">Читати →</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-img">🏔️</div>
+          <div class="blog-body">
+            <div class="blog-meta">🗓 5 листопада 2024 • Огляд</div>
+            <div class="blog-title">Огляд Буковелю: все, що потрібно знати перед поїздкою</div>
+            <div class="blog-excerpt">Найбільший гірськолижний курорт України. Ціни, траси, готелі, прокат — детальний огляд від нашої команди.</div>
+            <a href="https://uk.wikipedia.org/wiki/Буковель" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 16px;font-size:0.8rem">Читати →</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-img">🧥</div>
+          <div class="blog-body">
+            <div class="blog-meta">🗓 1 листопада 2024 • Поради</div>
+            <div class="blog-title">Як правильно одягтись на гірські лижі: шари та матеріали</div>
+            <div class="blog-excerpt">Система "три шари" врятує від морозу та вологи. Розповідаємо, що і як носити на схилі для максимального комфорту.</div>
+            <a href="https://uk.wikipedia.org/wiki/Гірськолижне_спорядження" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 16px;font-size:0.8rem">Читати →</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-img">🔧</div>
+          <div class="blog-body">
+            <div class="blog-meta">🗓 25 жовтня 2024 • Обслуговування</div>
+            <div class="blog-title">Як доглядати за лижами: заточка, змащення, зберігання</div>
+            <div class="blog-excerpt">Правильний догляд за спорядженням — запорука безпеки та тривалого терміну служби. Покрокова інструкція від майстрів.</div>
+            <a href="https://uk.wikipedia.org/wiki/Лижі" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 16px;font-size:0.8rem">Читати →</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-img">👶</div>
+          <div class="blog-body">
+            <div class="blog-meta">🗓 18 жовтня 2024 • Поради</div>
+            <div class="blog-title">Дитячі лижі: з якого віку і як обрати перше спорядження</div>
+            <div class="blog-excerpt">Перші кроки на схилі — відповідальний момент. Наші поради допоможуть обрати безпечне та зручне спорядження для дитини.</div>
+            <a href="https://uk.wikipedia.org/wiki/Гірськолижний_спорт#Діти_у_гірськолижному_спорті" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 16px;font-size:0.8rem">Читати →</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-img">🏅</div>
+          <div class="blog-body">
+            <div class="blog-meta">🗓 10 жовтня 2024 • Новини</div>
+            <div class="blog-title">Rossignol: історія бренду та новинки сезону</div>
+            <div class="blog-excerpt">Французький бренд з 1907 року — від дерев'яних лиж до революційних технологій. Що нового і чого чекати від сезону.</div>
+            <a href="https://uk.wikipedia.org/wiki/Rossignol" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 16px;font-size:0.8rem">Читати →</a>
+          </div>
+        </div>
+      </div>
+
+
+     
+
+<script src="js/images.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — Alpine Peak</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/nav-template.js"></script>
+
+<div class="page-wrapper">
+  <div class="main-content">
+
+    <div class="page-hero" data-bg-text="КАТАЛОГ">
+      <div class="breadcrumb"><a href="index.html">Головна</a> / Каталог</div>
+      <div class="section-eyebrow">Весь асортимент</div>
+      <h1 class="section-title">Каталог <em>товарів</em></h1>
+      <p class="section-desc">Понад 1200 позицій лижного спорядження від провідних світових брендів</p>
+    </div>
+    <section class="section">
+      <!-- Search + Sort Bar -->
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-bottom:1.5rem">
+        <div class="search-bar" style="flex:1;min-width:200px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" class="search-input" placeholder="Пошук товарів...">
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <label style="font-size:0.8rem;color:var(--silver);text-transform:uppercase;letter-spacing:1px">Сортування:</label>
+          <select class="form-control" style="width:auto" onchange="sortProducts(this.value)">
+            <option value="">За замовчуванням</option>
+            <option value="price-asc">Ціна: зростання</option>
+            <option value="price-desc">Ціна: спадання</option>
+            <option value="name">За назвою</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Price Filter -->
+      <div class="price-range reveal">
+        <label>Ціна до: <strong id="priceDisplay">100 000 ₴</strong></label>
+        <input type="range" id="priceRange" min="1000" max="100000" value="100000" step="500" style="width:200px">
+      </div>
+
+      <!-- Category tabs -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">Всі товари</button>
+        <button class="filter-tab" data-filter="skis">🎿 Лижі</button>
+        <button class="filter-tab" data-filter="snowboard">🏂 Сноуборди</button>
+        <button class="filter-tab" data-filter="boots">👟 Черевики</button>
+        <button class="filter-tab" data-filter="clothes">🧥 Одяг</button>
+        <button class="filter-tab" data-filter="helmets">⛑️ Шоломи</button>
+        <button class="filter-tab" data-filter="poles">🏒 Палки</button>
+        <button class="filter-tab" data-filter="accessories">🕶️ Аксесуари</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+
+        <div class="product-card" data-category="skis">
+         <div class="product-img">
+  <!-- Додаємо тег img з посиланням на картинку -->
+  <img src="img/products/rossignol-exp86.jpg" alt="Rossignol Experience 86" class="product-image-src">
+  <span class="product-badge">Хіт</span>
+  <button class="wishlist-btn" data-name="Rossignol Experience 86">♡</button>
+</div>
+          <div class="product-info">
+            <div class="product-category">Лижі</div>
+            <div class="product-name">Rossignol Experience 86</div>
+            <div class="product-rating">★★★★★ (128)</div>
+            <div class="product-price"><span class="price-new">18 990 ₴</span><span class="price-old">22 500 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Rossignol Experience 86',18990,'🎿')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="skis">
+          <div class="product-img">🎿
+            <button class="wishlist-btn" data-name="Salomon QST 92">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Лижі</div>
+            <div class="product-name">Salomon QST 92</div>
+            <div class="product-rating">★★★★★ (87)</div>
+            <div class="product-price"><span class="price-new">22 490 ₴</span><span class="price-old">26 000 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Salomon QST 92',22490,'🎿')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="skis">
+          <div class="product-img">🎿
+            <span class="product-badge">Новинка</span>
+            <button class="wishlist-btn" data-name="Atomic Vantage 90 Ti">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Лижі</div>
+            <div class="product-name">Atomic Vantage 90 Ti</div>
+            <div class="product-rating">★★★★☆ (63)</div>
+            <div class="product-price"><span class="price-new">24 990 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Atomic Vantage 90 Ti',24990,'🎿')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="snowboard">
+          <div class="product-img">🏂
+            <span class="product-badge">-20%</span>
+            <button class="wishlist-btn" data-name="Burton Custom Flying V">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Сноуборд</div>
+            <div class="product-name">Burton Custom Flying V</div>
+            <div class="product-rating">★★★★☆ (96)</div>
+            <div class="product-price"><span class="price-new">21 490 ₴</span><span class="price-old">26 900 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Burton Custom Flying V',21490,'🏂')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="snowboard">
+          <div class="product-img">🏂
+            <button class="wishlist-btn" data-name="Lib Tech Cold Brew C2">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Сноуборд</div>
+            <div class="product-name">Lib Tech Cold Brew C2</div>
+            <div class="product-rating">★★★★★ (42)</div>
+            <div class="product-price"><span class="price-new">19 990 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Lib Tech Cold Brew C2',19990,'🏂')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="boots">
+          <div class="product-img">👟
+            <button class="wishlist-btn" data-name="Head Raptor 130S GW">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Черевики</div>
+            <div class="product-name">Head Raptor 130S GW</div>
+            <div class="product-rating">★★★★★ (51)</div>
+            <div class="product-price"><span class="price-new">13 290 ₴</span><span class="price-old">15 000 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Head Raptor 130S GW',13290,'👟')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="boots">
+          <div class="product-img">👟
+            <span class="product-badge">Топ</span>
+            <button class="wishlist-btn" data-name="Salomon S/Pro 120">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Черевики</div>
+            <div class="product-name">Salomon S/Pro 120</div>
+            <div class="product-rating">★★★★★ (79)</div>
+            <div class="product-price"><span class="price-new">11 990 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Salomon S/Pro 120',11990,'👟')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="clothes">
+          <div class="product-img">🧥
+            <button class="wishlist-btn" data-name="Salomon QST Guard Jacket">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Куртка</div>
+            <div class="product-name">Salomon QST Guard Jacket</div>
+            <div class="product-rating">★★★★★ (74)</div>
+            <div class="product-price"><span class="price-new">8 490 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Salomon QST Guard Jacket',8490,'🧥')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="helmets">
+          <div class="product-img">⛑️
+            <button class="wishlist-btn" data-name="Oakley MOD5 Helmet">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Шолом</div>
+            <div class="product-name">Oakley MOD5 Helmet</div>
+            <div class="product-rating">★★★★☆ (38)</div>
+            <div class="product-price"><span class="price-new">4 990 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Oakley MOD5 Helmet',4990,'⛑️')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="poles">
+          <div class="product-img">🏒
+            <button class="wishlist-btn" data-name="Leki Carbon 14S">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Палки</div>
+            <div class="product-name">Leki Carbon 14S</div>
+            <div class="product-rating">★★★★★ (22)</div>
+            <div class="product-price"><span class="price-new">3 290 ₴</span><span class="price-old">3 900 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Leki Carbon 14S',3290,'🏒')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="accessories">
+          <div class="product-img">🕶️
+            <span class="product-badge">Хіт</span>
+            <button class="wishlist-btn" data-name="Oakley Flight Tracker">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Маска</div>
+            <div class="product-name">Oakley Flight Tracker</div>
+            <div class="product-rating">★★★★★ (115)</div>
+            <div class="product-price"><span class="price-new">5 490 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Oakley Flight Tracker',5490,'🕶️')">До кошика</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="accessories">
+          <div class="product-img">🧤
+            <button class="wishlist-btn" data-name="Black Diamond Guide Gloves">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Рукавиці</div>
+            <div class="product-name">Black Diamond Guide</div>
+            <div class="product-rating">★★★★☆ (67)</div>
+            <div class="product-price"><span class="price-new">2 290 ₴</span></div>
+            <button class="btn btn-primary" onclick="addToCart('Black Diamond Guide',2290,'🧤')">До кошика</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section" style="border-top:1px solid var(--border)">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Порівняння</div>
+        <h2 class="section-title">Таблиця <em>характеристик</em></h2>
+      </div>
+      <div style="overflow-x:auto" class="reveal">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Товар</th>
+              <th>Бренд</th>
+              <th>Категорія</th>
+              <th>Рівень</th>
+              <th>Ширина талії</th>
+              <th>Ціна</th>
+              <th>Рейтинг</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Experience 86</td><td>Rossignol</td><td>Лижі</td><td>Середній/Проф.</td><td>86 мм</td><td>18 990 ₴</td><td>⭐ 4.9</td></tr>
+            <tr><td>QST 92</td><td>Salomon</td><td>Лижі</td><td>Середній</td><td>92 мм</td><td>22 490 ₴</td><td>⭐ 4.8</td></tr>
+            <tr><td>Vantage 90 Ti</td><td>Atomic</td><td>Лижі</td><td>Проф.</td><td>90 мм</td><td>24 990 ₴</td><td>⭐ 4.7</td></tr>
+            <tr><td>Custom Flying V</td><td>Burton</td><td>Сноуборд</td><td>Середній/Проф.</td><td>—</td><td>21 490 ₴</td><td>⭐ 4.6</td></tr>
+            <tr><td>Cold Brew C2</td><td>Lib Tech</td><td>Сноуборд</td><td>Початківець+</td><td>—</td><td>19 990 ₴</td><td>⭐ 4.9</td></tr>
+            <tr><td>Raptor 130S GW</td><td>Head</td><td>Черевики</td><td>Проф.</td><td>97 мм</td><td>13 290 ₴</td><td>⭐ 4.9</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="js/images.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
